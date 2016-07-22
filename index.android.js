@@ -37,7 +37,7 @@ class wangyi extends Component {
        var ds=new ViewPager.DataSource({pageHasChanged:(p1,p2)=>p1!==p2});
        this.state={
         isMenuOpen:false,
-        tabIndex:0,
+        tabIndex:1,
         dataSource:ds.cloneWithPages(PAGES),
        }
      }
@@ -60,7 +60,6 @@ class wangyi extends Component {
       }
    }
    componentWillUnmount(){
-
 
      //因为本文件是安卓，所以不需要改判断
      if(Platform.OS==='android'){

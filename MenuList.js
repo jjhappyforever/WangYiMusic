@@ -33,8 +33,11 @@ export default class MenuList extends Component{
       //切记：height：null width:null 要设置,否则height width会图片原有的宽度
 
 
-      <Image resizeMode='cover' style={styles.head}
+      <Image resizeMode='cover' style={styles.headImg}
       source={require('./images/topinfo_ban_bg.jpg')}>
+      <View style={[styles.headOpacity]}/>
+
+      <View style={[styles.headImg,{justifyContent:'center',alignItems:'center'}]}>
 
       <View style={styles.headText}>
        <Text style={{color:'#e3e3e2'}}>登陆网易云音乐</Text>
@@ -46,6 +49,8 @@ export default class MenuList extends Component{
        <Text style={{color:'#fff'}}>立即登录</Text>
       </View>
       </TouchableOpacity>
+
+      </View>
 
       </Image>
 
@@ -148,11 +153,16 @@ export default class MenuList extends Component{
 }
 
 const styles=StyleSheet.create({
-  head:{
+  headImg:{
     height:160,
     width:300,
-    justifyContent:'center',
-    alignItems:'center',
+  },
+  headOpacity:{
+    height:160,
+    width:300,
+    backgroundColor:'#000',
+    opacity:0.2,
+    position:'absolute',
   },
   headText:{
     alignItems:'center',
